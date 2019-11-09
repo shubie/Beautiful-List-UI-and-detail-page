@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
   final Lesson lesson;
+
   DetailPage({Key key, this.lesson}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final levelIndicator = Container(
@@ -16,7 +18,7 @@ class DetailPage extends StatelessWidget {
     );
 
     final coursePrice = Container(
-      padding: const EdgeInsets.all(7.0),
+      padding: const EdgeInsets.all(4.0),
       decoration: new BoxDecoration(
           border: new Border.all(color: Colors.white),
           borderRadius: BorderRadius.circular(5.0)),
@@ -29,11 +31,11 @@ class DetailPage extends StatelessWidget {
     final topContentText = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        SizedBox(height: 120.0),
+        SizedBox(height: 70.0),
         Icon(
           Icons.directions_car,
           color: Colors.white,
-          size: 40.0,
+          size: 30.0,
         ),
         Container(
           width: 90.0,
@@ -42,21 +44,23 @@ class DetailPage extends StatelessWidget {
         SizedBox(height: 10.0),
         Text(
           lesson.title,
-          style: TextStyle(color: Colors.white, fontSize: 45.0),
+          style: TextStyle(color: Colors.white, fontSize: 35.0),
         ),
-        SizedBox(height: 30.0),
+        SizedBox(height: 20.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Expanded(flex: 1, child: levelIndicator),
             Expanded(
-                flex: 6,
-                child: Padding(
-                    padding: EdgeInsets.only(left: 10.0),
-                    child: Text(
-                      lesson.level,
-                      style: TextStyle(color: Colors.white),
-                    ))),
+              flex: 6,
+              child: Padding(
+                padding: EdgeInsets.only(left: 10.0),
+                child: Text(
+                  lesson.level,
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
             Expanded(flex: 1, child: coursePrice)
           ],
         ),
