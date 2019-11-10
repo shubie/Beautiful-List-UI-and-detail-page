@@ -76,7 +76,7 @@ class DetailPage extends StatelessWidget {
             )),
         Container(
           height: MediaQuery.of(context).size.height * 0.5,
-          padding: EdgeInsets.all(40.0),
+          padding: EdgeInsets.all(20.0),
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(color: Color.fromRGBO(58, 66, 86, .9)),
           child: Center(
@@ -85,7 +85,7 @@ class DetailPage extends StatelessWidget {
         ),
         Positioned(
           left: 8.0,
-          top: 60.0,
+          top: 40.0,
           child: InkWell(
             onTap: () {
               Navigator.pop(context);
