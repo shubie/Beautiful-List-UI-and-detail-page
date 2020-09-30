@@ -1,4 +1,4 @@
-# beautiful_list
+# beautiful_list (A one stop shop for UI)
 
 A new Flutter project.
 
